@@ -1,0 +1,353 @@
+/*Fonts*/
+@font-face {
+    font-family:'Azedo';
+    src: url(../fonts/azedo.otf);
+}
+@font-face {
+    font-family:'Fester';
+    src: url(../fonts/fester-book.otf);
+}
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background-image: url(../assets/background-2.svg);
+    background-size: cover;
+}
+
+/*Menu*/
+.menu-container{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+header{
+    width: 100%;
+    background-color: #eae2b7;
+    font-family: 'Azedo';
+}
+.logo-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+}
+.logo-container img{
+    width: 110px;
+    
+}
+.menu{
+    position: absolute;
+    background-color: #eae2b7;
+    width: 300px;
+    height: 100%;
+    margin-left: -100%;
+    transition: all 0.6s ease;
+    padding-top: 50px;
+    
+}
+.menu li{
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 25px;
+}
+.menu ul{
+    list-style: none;
+    justify-content: left;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 35px;
+    padding: 0;
+    flex-direction: column;
+    margin: 40px 0 100px;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    padding: 0 40px;
+    justify-content: space-evenly;
+}
+
+.social-icon{
+    width: 30px;
+}
+
+.social-media a{
+    border-radius: 250px;
+    background-color: #f77f00;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    transition: ease 0.5s;
+}
+
+.social-media a:hover{
+    transform: scale(1.1);
+    background-color: #d62828;
+}
+
+.menu li a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    transition: ease 0.5s;
+}
+
+.menu li a:hover{
+    transform: scale(1.1);
+    color: #d62828;
+}
+
+#btn-menu{
+    display: none;
+}
+header label{
+    cursor: pointer;
+    display: flex;
+    justify-content: left;
+    margin-left: 40px;
+    z-index: 10;
+}
+
+span.material-icons{
+    font-size: 50px;
+    color: black;
+}
+
+#btn-menu:checked ~ .menu{
+    margin-left: 0;
+    position: fixed;
+    
+}
+.menu-info{
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    margin-left: 40px;
+}
+.menu-info a{
+    font-family: 'Fester';
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    transition: ease 0.5s;
+}
+
+.menu-info a:hover{
+    transform: scale(1.1);
+    color: #d62828;
+}
+
+.number .material-icons{
+    font-size: 35px;
+    margin-right: 10px;
+}
+.number{
+    display: flex;
+}
+@media screen and (max-width: 835px){
+.menu{
+    width: 100%;
+}
+}
+
+/*Main Section*/
+.main-section{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1024px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fester';
+}
+
+.main-image{
+    width: 835px;
+    margin: 50px 0 0;
+}
+
+.main-text{
+    padding: 20px;
+    font-size: 22px;
+    max-width: 835px;
+    background-color: #eae2b7;
+    display: flex;
+}
+
+.main-text p span{
+    color: red;
+    font-size: 55px;
+}
+
+.main-text p{ 
+    text-align: justify;
+}
+
+@media screen and (max-width: 835px){
+    .main-section{
+        margin: 40px;
+
+    }
+    .main-image{
+        width: 100%;
+    }
+}
+
+/*GALLERY PAGE*/
+.main-header{
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Azedo';
+}
+
+.gallery{
+    margin: 0 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gallery-section{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+.gallery-image img{
+    width: 100%;
+}
+
+.gallery-text{
+    font-family: 'Fester';
+    font-size: 18px;
+    text-align: justify;
+    padding: 20px;
+    background-color: #eae2b7;
+
+}
+
+.back-button{
+    margin: 40px auto;
+    width: 200px;
+    font-family:'Fester';
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: #003049;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    transition: ease 0.5s;
+
+}
+
+.back-button a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.back-button:hover{
+    transform: scale(1.1);
+    background-color: #f77f00;
+}
+@media screen and (max-width: 835px){
+    .gallery-text{
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/*BOOK A VISIT PAGE*/
+.book-form{
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    background-color: #eae2b7;
+    max-width: 836px;
+    font-family:'Fester';
+    font-size: 18px;
+}
+
+.book-form input{
+    border-radius: 4px;
+    border: none;
+    height: 30px;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.input-container label{
+    margin: 20px 0 10px;
+}
+
+#submit-button{
+    width: 50%;
+    font-family: 'Fester';
+    font-weight: bold;
+    margin: 30px auto;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 16px;
+    border: black solid 2px;
+    transition: ease 0.5s;
+    background-color: #003049;
+    color: white;
+}
+
+#submit-button:hover{
+    transform: scale(1.1);
+    background-color: #d62828;
+}
+
+/*ABOUT PAGE*/
+
+.about-us{
+    display: flex;
+    max-width: 836px;
+    margin: 40px auto;
+    background-color: #eae2b7;
+    font-size: 24px;
+    font-family: 'Fester';
+    text-align: justify;
+    padding: 20px;
+}
+
+.about-image{
+    max-width: 836px;
+    margin: 0 auto;
+}
+
+.about-image img{
+    width: 100%;
+}
+
+@media screen and (max-width: 835px){
+    .about-us{
+        margin: 40px;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .about-image{
+        margin: 0 40px;
+    }
+}

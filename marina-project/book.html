@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Visit</title>
+    <meta name="description" content="lorem ipsum">
+    <link rel="icon" href="assets/asset-1.png" type="image/png" sizes="40x40"> 
+    <link rel="stylesheet" href="style/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<!--Menu-->
+<header>
+    <section class="menu-container">
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><span class="material-icons">menu</span></label>
+        <section class="logo-container">
+            <a href="index.html"><img src="assets/main-logo.png" alt="logo"></a>
+        </section>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="book.html">Book a Visit</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        <div class="social-media">
+            <a href=""><img class="social-icon" src="assets/facebook.svg" alt="facebook"></a>
+            <a href=""><img class="social-icon" src="assets/instagram.svg" alt="instagram"></a>
+            <a href=""><img class="social-icon" src="assets/twitter.svg" alt="twitter"></a>
+        </div>
+        <div class="menu-info">
+            <div class="number"><span class="material-icons">phone</span><a href="tel:+5491123928098">11-2392-8098</a></div>
+        </div>
+        </nav>
+    </section>
+</header>
+<!--Book a visit-->
+<h1 class="main-header">Book a Visit</h1>
+
+<form class="book-form" action="" method="post">
+    <fieldset class="input-container">
+    <label for="name">Name:</label>
+    <input type="text" class="input" id="name" placeholder="Name">
+    <label for="phone">Phone:</label>
+    <input type="text" class="input" id="phone" placeholder="Phone">
+    <label for="date">Date of visit:</label>
+    <input type="date" class="date" id="date" min="2022-02-26" required>
+    <label for="time">Schedule:</label>
+    <input type="time" id="time" min="09:00" max="18:00" required>
+    <small>Available hours: 9 to 18</small>
+    </fieldset>
+    <input type="submit" class="submit-button" id="submit-button" value="Book">
+
+</form>
+</body>
+</html>
